@@ -2,7 +2,7 @@ import logging
 import os.path
 
 from scripts.configs import path_define
-from scripts.utils import bitmap_util, fs_util
+from scripts.utils import bitmap_util
 
 logger = logging.getLogger('glyph_service')
 
@@ -21,7 +21,7 @@ def load_fragments(font_size: int) -> dict[int, list[list[int]]]:
 
 def make_patterns(font_size: int, fragments: dict[int, list[list[int]]]):
     outputs_dir = os.path.join(path_define.outputs_dir, str(font_size), '2800-28FF Braille Patterns')
-    fs_util.make_dir(outputs_dir)
+    os.makedirs(outputs_dir, exist_ok=True)
 
     for code_point in range(0x2800, 0x28FF + 1):
         data = [[0] * (font_size // 2) for _ in range(font_size)]
