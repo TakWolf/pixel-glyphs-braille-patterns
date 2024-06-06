@@ -36,4 +36,4 @@ def make_patterns(font_size: int, fragments: dict[int, list[list[int]]]):
                     data[y][x] = 1
         file_path = outputs_dir.joinpath(f'{code_point:04X}.png')
         bitmap_util.save_png(data, file_path)
-        logger.info("Make pattern file: '%s'", file_path)
+        logger.info("Make pattern: '%s'", file_path)
