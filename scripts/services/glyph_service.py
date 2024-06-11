@@ -3,7 +3,7 @@ import logging
 from scripts.configs import path_define
 from scripts.utils import bitmap_util
 
-logger = logging.getLogger('glyph_service')
+logger = logging.getLogger(__name__)
 
 
 def load_fragments(font_size: int) -> dict[int, list[list[int]]]:
