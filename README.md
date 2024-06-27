@@ -33,4 +33,4 @@ Unicode 区块：2800 ~ 28FF; Braille Patterns
 
 ## 程序依赖
 
-- [PyPNG](https://gitlab.com/drj11/pypng)
+- [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
