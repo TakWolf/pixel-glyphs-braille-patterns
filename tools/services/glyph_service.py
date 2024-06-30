@@ -2,7 +2,7 @@ import logging
 
 from pixel_font_knife import mono_bitmap_util
 
-from scripts.configs import path_define
+from tools.configs import path_define
 
 logger = logging.getLogger(__name__)
 
