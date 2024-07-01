@@ -1,10 +1,6 @@
-import logging
-
 from pixel_font_knife import mono_bitmap_util
 
 from tools.configs import path_define
-
-logger = logging.getLogger(__name__)
 
 
 def load_fragments(font_size: int) -> dict[int, list[list[int]]]:
@@ -37,4 +33,4 @@ def make_patterns(font_size: int, fragments: dict[int, list[list[int]]]):
                     bitmap[y][x] = 1
         file_path = outputs_dir.joinpath(f'{code_point:04X}.png')
         mono_bitmap_util.save_png(bitmap, file_path)
-        logger.info("Make pattern: '%s'", file_path)
+        print(f"Make pattern: '{file_path}'")
