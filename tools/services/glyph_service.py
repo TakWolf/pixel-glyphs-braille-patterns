@@ -1,9 +1,9 @@
 from pixel_font_knife.mono_bitmap import MonoBitmap
 
-from tools.configs import path_define
+from tools.configs import path_define, FontSize
 
 
-def _load_fragments(font_size: int) -> dict[int, MonoBitmap]:
+def _load_fragments(font_size: FontSize) -> dict[int, MonoBitmap]:
     fragments = {}
     for i in range(1, 9):
         file_path = path_define.fragments_dir.joinpath(str(font_size), f'{i}.png')
@@ -15,7 +15,7 @@ def _load_fragments(font_size: int) -> dict[int, MonoBitmap]:
     return fragments
 
 
-def make_patterns(font_size: int):
+def make_patterns(font_size: FontSize):
     outputs_dir = path_define.outputs_dir.joinpath(str(font_size), '2800-28FF Braille Patterns')
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
