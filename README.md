@@ -1,5 +1,9 @@
 # 像素字形 - 盲文图案
 
+[![License OFL](https://img.shields.io/badge/license-OFL--1.1-orange)](https://openfontlicense.org)
+[![License MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/license/MIT)
+[![Releases](https://img.shields.io/github/v/release/TakWolf/pixel-glyphs-braille-patterns)](https://github.com/TakWolf/pixel-glyphs-braille-patterns/releases)
+
 Unicode 区块：2800 ~ 28FF; Braille Patterns
 
 ## 原理
