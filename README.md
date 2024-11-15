@@ -38,3 +38,4 @@ Unicode 区块：2800 ~ 28FF; Braille Patterns
 ## 程序依赖
 
 - [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
+- [Loguru](https://github.com/Delgan/loguru)
