@@ -1,3 +1,4 @@
+from loguru import logger
 from pixel_font_knife.mono_bitmap import MonoBitmap
 
 from tools.configs import path_define, FontSize
@@ -30,4 +31,4 @@ def make_glyphs(font_size: FontSize):
             bitmap = bitmap.plus(parts[i + 1])
         file_path = outputs_dir.joinpath(f'{code_point:04X}.png')
         bitmap.save_png(file_path)
-        print(f"Make glyph: '{file_path}'")
+        logger.info("Make glyph: '{}'", file_path)
