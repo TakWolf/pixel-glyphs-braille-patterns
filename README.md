@@ -23,7 +23,12 @@ Unicode 区块：2800 ~ 28FF; Braille Patterns
 └─────┘
 ```
 
-## 授权信息
+## 程序依赖
+
+- [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
+- [Loguru](https://github.com/Delgan/loguru)
+
+## 许可证
 
 分为「字形」和「程序」两个部分。
 
@@ -34,8 +39,3 @@ Unicode 区块：2800 ~ 28FF; Braille Patterns
 ### 程序
 
 使用 [「MIT 许可证」](LICENSE-MIT) 授权。
-
-## 程序依赖
-
-- [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
-- [Loguru](https://github.com/Delgan/loguru)
