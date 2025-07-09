@@ -1,7 +1,8 @@
 from loguru import logger
 from pixel_font_knife.mono_bitmap import MonoBitmap
 
-from tools.configs import path_define, FontSize
+from tools.configs import path_define
+from tools.configs.options import FontSize
 
 
 def _load_parts(font_size: FontSize) -> dict[int, MonoBitmap]:
