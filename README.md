@@ -4,7 +4,7 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE-MIT)
 [![Releases](https://img.shields.io/github/v/release/TakWolf/pixel-glyphs-braille-patterns)](https://github.com/TakWolf/pixel-glyphs-braille-patterns/releases)
 
-Unicode 区块：2800 ~ 28FF; Braille Patterns
+`2800 ~ 28FF; Braille Patterns`
 
 ## 原理
 
