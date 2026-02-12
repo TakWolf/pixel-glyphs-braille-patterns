@@ -1,10 +1,8 @@
-from typing import Literal, get_args
 
-type FontSize = Literal[
-    8,
-    10,
-    12,
-    14,
-    16,
+font_sizes = [
+    (4, 8),
+    (5, 10),
+    (6, 12),
+    (7, 14),
+    (8, 16),
 ]
-font_sizes = list[FontSize](get_args(FontSize.__value__))
