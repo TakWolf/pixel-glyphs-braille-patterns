@@ -35,16 +35,15 @@ wheels = [
 
 [[package]]
 name = "pixel-font-knife"
-version = "0.0.21"
+version = "0.0.25"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pypng" },
     { name = "pyyaml" },
     { name = "unidata-blocks" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ab/e5/1616160d97fa52fe0cba787a84cb04b8914a95fa354d6638b89b0d626239/pixel_font_knife-0.0.21.tar.gz", hash = "sha256:413c2bc579f9b80a78e03feb81b66209a14ffab0d4e07e0b1b0ef99f6850246b", size = 6323, upload-time = "2026-01-15T15:35:13.9Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/53/e6/ae588be5a0741966e8c2ab2d97552dc8138c33705c2f85165997b4c670fe/pixel_font_knife-0.0.25.tar.gz", hash = "sha256:c45790c5e094b30535275ba19ee5afe8dfbbb8f6d1ab30376af003d352592b33", size = 28850, upload-time = "2026-07-13T13:10:58.907Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d7/d0/f018a8b385fe311fee5b195b3d0c6a70abf6f45396366893c691a9cdce49/pixel_font_knife-0.0.21-py3-none-any.whl", hash = "sha256:e6d6c24f9da54be014c6bad393a598e44ddb3bf331ce9f2cc8c769060e6997e9", size = 8968, upload-time = "2026-01-15T15:35:14.789Z" },
+    { url = "https://files.pythonhosted.org/packages/d4/c2/4e635d4526e0980b8cf2933fe1e51754e9cd57bdc73eaffe31617ad1f69a/pixel_font_knife-0.0.25-py3-none-any.whl", hash = "sha256:5798e6d05d1ddf0af33400b4579b2cb1ccf7e0ee32346e82649e7703cdd05ee2", size = 32459, upload-time = "2026-07-13T13:10:58.047Z" },
 ]
 
 [[package]]
@@ -59,16 +58,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "loguru", specifier = "==0.7.3" },
-    { name = "pixel-font-knife", specifier = "==0.0.21" },
-]
-
-[[package]]
-name = "pypng"
-version = "0.20220715.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/93/cd/112f092ec27cca83e0516de0a3368dbd9128c187fb6b52aaaa7cde39c96d/pypng-0.20220715.0.tar.gz", hash = "sha256:739c433ba96f078315de54c0db975aee537cbc3e1d0ae4ed9aab0ca1e427e2c1", size = 128992, upload-time = "2022-07-15T14:11:05.301Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/3e/b9/3766cc361d93edb2ce81e2e1f87dd98f314d7d513877a342d31b30741680/pypng-0.20220715.0-py3-none-any.whl", hash = "sha256:4a43e969b8f5aaafb2a415536c1a8ec7e341cd6a3f957fd5b5f32a4cfeed902c", size = 58057, upload-time = "2022-07-15T14:11:03.713Z" },
+    { name = "pixel-font-knife", specifier = "==0.0.25" },
 ]
 
 [[package]]
@@ -99,14 +89,14 @@ wheels = [
 
 [[package]]
 name = "unidata-blocks"
-version = "0.0.24"
+version = "0.0.25"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "langcodes" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c6/2f/b3e885772999793f58e29c1b607619f465bfe58b0f2fc0e8ad584d920315/unidata_blocks-0.0.24.tar.gz", hash = "sha256:c90256e2ed2ff53ad834f39e12a84e9c272ecab8298f8432d5ac8b05e0a0a761", size = 13728, upload-time = "2026-01-06T04:16:25.696Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/db/5f1a4d858be068570d271408186325f16ab0409284ace3caf604830c348d/unidata_blocks-0.0.25.tar.gz", hash = "sha256:81da14cf551d02a8176c6d95af74be348537ee5a8585854cf2c28b5b9e61ab44", size = 14413, upload-time = "2026-05-31T12:28:04.86Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4e/00/ca4902d1b03147c270e463095ac11094c4ec8f9eb655e0f979f332cc68f0/unidata_blocks-0.0.24-py3-none-any.whl", hash = "sha256:9ce6448307afdcef54fefc056dfb5d91a89b3d4e8da7b4f7c601ecba35de7818", size = 19115, upload-time = "2026-01-06T04:16:26.844Z" },
+    { url = "https://files.pythonhosted.org/packages/35/b1/3d3b9a1d5d17c6a5daf16d0dd529c4db9a1d952accf3460b43c15aaf3a6d/unidata_blocks-0.0.25-py3-none-any.whl", hash = "sha256:52e1aa89d02af84d921e6c5895aae5221637cba13ee32488ef00f3766b86c968", size = 20116, upload-time = "2026-05-31T12:28:03.97Z" },
 ]
 
 [[package]]
