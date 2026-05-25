@@ -12,6 +12,7 @@ def make_release_zip(font_size_x: int, font_size_y: int):
     zip_file_path = path_define.releases_dir.joinpath(f'pixel-glyphs-braille-patterns-{font_size_x}x{font_size_y}px-v{configs.version}.zip')
     with zipfile.ZipFile(zip_file_path, 'w') as file:
         file.write(path_define.project_root_dir.joinpath('LICENSE-OFL'), 'OFL.txt')
+
         outputs_dir = path_define.outputs_dir.joinpath(f'{font_size_x}x{font_size_y}')
         for file_dir, _, file_names in outputs_dir.walk():
             for file_name in file_names:
