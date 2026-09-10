@@ -7,7 +7,7 @@ from tools.configs import path_define
 def _load_parts(font_size_x: int, font_size_y: int) -> dict[int, MonoBitmap]:
     parts = {}
     for i in range(1, 9):
-        file_path = path_define.parts_dir.joinpath(f'{font_size_x}x{font_size_y}', f'{i}.png')
+        file_path = path_define.PARTS_DIR.joinpath(f'{font_size_x}x{font_size_y}', f'{i}.png')
         bitmap = MonoBitmap.load_png(file_path)
         assert bitmap.width == font_size_x
         assert bitmap.height == font_size_y
@@ -17,7 +17,7 @@ def _load_parts(font_size_x: int, font_size_y: int) -> dict[int, MonoBitmap]:
 
 
 def make_glyphs(font_size_x: int, font_size_y: int):
-    outputs_dir = path_define.outputs_dir.joinpath(f'{font_size_x}x{font_size_y}', '2800-28FF Braille Patterns')
+    outputs_dir = path_define.OUTPUTS_DIR.joinpath(f'{font_size_x}x{font_size_y}', '2800-28FF Braille Patterns')
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
     parts = _load_parts(font_size_x, font_size_y)
