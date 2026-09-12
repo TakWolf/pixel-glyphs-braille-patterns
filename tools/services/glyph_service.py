@@ -16,7 +16,7 @@ def _load_parts(font_size_x: int, font_size_y: int) -> dict[int, MonoBitmap]:
     return parts
 
 
-def make_glyphs(font_size_x: int, font_size_y: int):
+def make_glyphs(font_size_x: int, font_size_y: int) -> None:
     outputs_dir = path_define.OUTPUTS_DIR.joinpath(f'{font_size_x}x{font_size_y}', '2800-28FF Braille Patterns')
     outputs_dir.mkdir(parents=True, exist_ok=True)
 

@@ -6,7 +6,7 @@ from tools import configs
 from tools.configs import path_define
 
 
-def make_release_zip(font_size_x: int, font_size_y: int):
+def make_release_zip(font_size_x: int, font_size_y: int) -> None:
     path_define.RELEASES_DIR.mkdir(parents=True, exist_ok=True)
 
     zip_file_path = path_define.RELEASES_DIR.joinpath(f'pixel-glyphs-braille-patterns-{font_size_x}x{font_size_y}px-v{configs.VERSION}.zip')
