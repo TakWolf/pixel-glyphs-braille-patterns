@@ -1,5 +1,5 @@
 from loguru import logger
-from pixel_font_knife.mono_bitmap import MonoBitmap
+from pixel_font_knife.bitmap.mono_bitmap import MonoBitmap
 
 from tools.configs import path_define
 
@@ -21,7 +21,7 @@ def make_glyphs(font_size_x: int, font_size_y: int) -> None:
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
     parts = _load_parts(font_size_x, font_size_y)
-    canvas = MonoBitmap.create(font_size_x, font_size_y)
+    canvas = MonoBitmap.blank(font_size_x, font_size_y)
     for code_point in range(0x2800, 0x28FF + 1):
         bitmap = canvas
         bin_string = f'{code_point - 0x2800:08b}'
