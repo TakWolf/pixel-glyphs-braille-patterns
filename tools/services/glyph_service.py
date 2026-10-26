@@ -1,7 +1,7 @@
 from loguru import logger
 from pixel_font_knife.bitmap.mono_bitmap import MonoBitmap
 
-from tools.configs import path_define
+from tools.config import path_define
 
 
 def _load_parts(font_size_x: int, font_size_y: int) -> dict[int, MonoBitmap]:
@@ -11,7 +11,6 @@ def _load_parts(font_size_x: int, font_size_y: int) -> dict[int, MonoBitmap]:
         bitmap = MonoBitmap.load_png(file_path)
         assert bitmap.width == font_size_x
         assert bitmap.height == font_size_y
-        bitmap.save_png(file_path)
         parts[i] = bitmap
     return parts
 
@@ -28,6 +27,6 @@ def make_glyphs(font_size_x: int, font_size_y: int) -> None:
         for i, c in enumerate(reversed(bin_string)):
             if c == '0':
                 continue
-            bitmap = bitmap.plus(parts[i + 1])
+            bitmap = bitmap.union(parts[i + 1])
         bitmap.save_png(outputs_dir.joinpath(f'{code_point:04X}.png'))
     logger.info('Make glyphs: {}x{}px', font_size_x, font_size_y)

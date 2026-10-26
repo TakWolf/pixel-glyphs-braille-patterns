@@ -1,6 +1,6 @@
 import shutil
 
-from tools.configs import path_define, options
+from tools.config import path_define, options
 from tools.services import glyph_service, publish_service
 
 
