@@ -4,15 +4,13 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE-MIT)
 [![Releases](https://img.shields.io/github/v/release/TakWolf/pixel-glyphs-braille-patterns?style=flat-square)](https://github.com/TakWolf/pixel-glyphs-braille-patterns/releases)
 
-`2800 ~ 28FF; Braille Patterns`
+`2800..28FF; Braille Patterns`
 
 ## 原理
 
-一个盲文图案由最多 8 个点组成，共 256 种图案。其变化规律满足二进制规则。因此，按顺序点亮对应的点即可生成全部字形。
+一个盲文图案包含 8 个点位，每个点位有凸起和空白两种状态，因此共有 2⁸ = 256 种组合，其中包括全空白图案。
 
-需要注意的是，历史上盲文仅使用 6 个点，底部两个点是后来添加的。因此，底部两个点顺序和上面 6 个点顺序不同。
-
-8 个点的顺序如下：
+传统六点盲文的点位按先左列、后右列的顺序编号。八点盲文保留原有编号，将左下方和右下方新增的两个点位分别编号为 7 和 8，排列如下：
 
 ```text
 ┌─────┐
@@ -22,6 +20,10 @@
 │ 7 8 │
 └─────┘
 ```
+
+在 Unicode 编码中，第 1～8 点依次对应一个 8 位二进制数从低到高的各位：值为 1 表示该点凸起，值为 0 表示该点空白。将这个数加上区块起始码位 `U+2800`，即可得到对应字符的码位。
+
+因此，遍历 0～255，并根据各位的值绘制对应点位，即可生成全部字形。
 
 ## 程序依赖
 
