@@ -1,13 +1,13 @@
 from loguru import logger
 from pixel_font_knife.bitmap.mono_bitmap import MonoBitmap
 
-from tools.config import path_define
+from tools.config import paths
 
 
 def _load_parts(glyph_width: int, glyph_height: int) -> dict[int, MonoBitmap]:
     parts = {}
     for i in range(1, 9):
-        file_path = path_define.PARTS_DIR.joinpath(f'{glyph_width}x{glyph_height}', f'{i}.png')
+        file_path = paths.PARTS_DIR.joinpath(f'{glyph_width}x{glyph_height}', f'{i}.png')
         bitmap = MonoBitmap.load_png(file_path)
         assert bitmap.width == glyph_width
         assert bitmap.height == glyph_height
@@ -16,7 +16,7 @@ def _load_parts(glyph_width: int, glyph_height: int) -> dict[int, MonoBitmap]:
 
 
 def make_glyphs(glyph_width: int, glyph_height: int) -> None:
-    outputs_dir = path_define.OUTPUTS_DIR.joinpath(f'{glyph_width}x{glyph_height}', '2800-28FF Braille Patterns')
+    outputs_dir = paths.OUTPUTS_DIR.joinpath(f'{glyph_width}x{glyph_height}', '2800-28FF Braille Patterns')
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
     parts = _load_parts(glyph_width, glyph_height)
