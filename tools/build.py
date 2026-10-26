@@ -8,9 +8,9 @@ def main() -> None:
     if path_define.BUILD_DIR.exists():
         shutil.rmtree(path_define.BUILD_DIR)
 
-    for font_size_x, font_size_y in options.FONT_SIZES:
-        glyph_service.make_glyphs(font_size_x, font_size_y)
-        publish_service.make_release_zip(font_size_x, font_size_y)
+    for glyph_width, glyph_height in options.GLYPH_SIZES:
+        glyph_service.make_glyphs(glyph_width, glyph_height)
+        publish_service.make_release_zip(glyph_width, glyph_height)
 
 
 if __name__ == '__main__':

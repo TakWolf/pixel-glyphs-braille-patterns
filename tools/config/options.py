@@ -1,5 +1,5 @@
 
-FONT_SIZES = [
+GLYPH_SIZES = [
     (4, 8),
     (4, 12),
     (5, 10),
