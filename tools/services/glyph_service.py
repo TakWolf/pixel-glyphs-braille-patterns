@@ -29,4 +29,5 @@ def make_glyphs(glyph_width: int, glyph_height: int) -> None:
                 continue
             bitmap = bitmap.union(parts[i + 1])
         bitmap.save_png(outputs_dir.joinpath(f'{code_point:04X}.png'))
+
     logger.info('Make glyphs: {}x{}px', glyph_width, glyph_height)
